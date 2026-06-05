@@ -47,7 +47,7 @@
 
 ```text
 resume2026/
-├── index.html
+├── index.html  
 ├── style.css
 ├── profile.jpg
 ├── music.png
@@ -56,34 +56,4 @@ resume2026/
 ├── video.png
 └── README.md
 
-##🌐 **주요 기능**
-Hero & Profile
-
-기본 인적 사항과 핵심 역량을 보여주는 메인 섹션
-
-Interests (인터랙티브 룰렛)
-
-JavaScript를 활용하여 관심사 4가지를 랜덤으로 뽑는 기능
-
-버튼 클릭 시 회전 애니메이션과 함께 결과 팝업 출력
-
-Development Skills (모달 팝업)
-
-JS 없이 HTML Checkbox와 CSS만을 활용한 가볍고 빠른 스킬 상세 보기 팝업 구현
-
-Work Experience (3D 플립 카드)
-
-CSS 3D Transform을 활용해, 마우스 오버 시 카드가 180도 뒤집히며 상세 업무 성과가 나오는 입체적인 명함 형태 구현
-
-반응형 레이아웃
-
-모바일, 태블릿, 데스크탑 환경에 맞춰 카드 배열이 자연스럽게 변환 (CSS Grid 활용)
-
-##🎯 **프로젝트 목표**
-깔끔하고 눈에 피로가 적은 디자인 사용
-
-CSS Grid와 Flexbox를 활용한 직관적이고 깔끔한 반응형 레이아웃 구성
-
-ai를 이용한 JavaScript 사용 방법 습득
-
-GitHub Pages를 이용한 웹사이트 배포 프로세스 습득
+**프로젝트 목표**
