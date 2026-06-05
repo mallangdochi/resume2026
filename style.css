@@ -191,11 +191,8 @@ body {
 }
 
 .hover-btn {
-    padding: 10px 18px;
-    background: var(--accent);
-    color: white;
+    color: black;
     border: none;
-    border-radius: 8px;
     cursor: pointer;
     text-decoration: none;
     display: inline-block;
@@ -204,7 +201,6 @@ body {
 }
 
 .hover-btn:hover {
-    background: var(--accent-dark);
     transform: translateY(-1px);
 }
 
