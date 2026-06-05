@@ -19,11 +19,6 @@
 
 <br>
 
-## 🗓️ 제작 기간
-
-* 2026-05-29 ~ 2026-06-05
-
-<br>
 
 ## 🛠️ 사용 기술
 
@@ -43,17 +38,41 @@
 
 <br>
 
-## 📁 프로젝트 구조
-
-```text
-resume2026/
-├── index.html  
-├── style.css
-├── profile.jpg
-├── music.png
-├── pet.png
-├── game.png
-├── video.png
-└── README.md
-
 **프로젝트 목표**
+*눈에 피로감이 덜한 페이지 만들기
+*CSS Grid와 Flexbox를 활용한 직관적이고 깔끔한 반응형 레이아웃 구성
+*AI를 이용한 JavaScript 사용
+*GitHub Pages를 이용한 웹사이트 배포 프로세스 습득
+
+**주요기능**
+*Hero & Profile
+
+기본 인적 사항과 핵심 역량을 보여주는 메인 섹션
+
+*Interests (인터랙티브 룰렛)
+
+JavaScript를 활용하여 관심사 4가지를 랜덤으로 뽑는 기능
+
+버튼 클릭 시 회전 애니메이션과 함께 결과 팝업 출력
+
+*Development Skills (모달 팝업)
+
+JS 없이 HTML Checkbox와 CSS만을 활용한 가볍고 빠른 스킬 상세 보기 팝업 구현
+
+*Work Experience (3D 플립 카드)
+
+CSS 3D Transform을 활용해, 마우스 오버 시 카드가 180도 뒤집히며 상세 업무 성과가 나오는 입체적인 명함 형태 구현
+
+❗ **어려웠던 점**
+1.스킬 카드에 링크(a 태그)를 추가하는 과정에서 레이아웃 붕괴 (첫 번째 카드를 제외한 나머지 카드가 밖으로 밀려남).
+1-1.코드 확인 결과 기존 팝업을 지우면서 </div> 닫는 태그가 하나 더 남아 Grid 컨테이너가 일찍 닫힌 것을 발견, 불필요한 태그를 지워 원래 구조로 복구.
+2.반응형 과정에서 계속 오른쪽이 비는 상태가 계속됨
+2-1.min-width 가 아닌 Max-whith로 되있는것을 발견 후 수정
+2-2.flex-direction 을 cullum에서 row로 변경
+3.인터렉티브 룰렛이 반응형 시 크기가 변하지 않음
+
+## 📬 Contact
+
+**정종범**
+* **GitHub** : https://github.com/mallangdochi
+* **Email** : whdqja6943@gmail.com
