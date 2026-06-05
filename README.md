@@ -8,13 +8,14 @@
 
 ## 🎥 프로젝트 미리보기
 
-![미리보기 이미지](여기에_프로젝트_완성_화면_캡처_이미지_경로를_넣으세요_예:image/preview.png)
+<img width="1872" height="1280" alt="image" src="https://github.com/user-attachments/assets/816a78b9-3163-41af-ada9-c1dec9904920" />
+
 
 <br>
 
 ## 🔗 배포 주소
 
-* **Portfolio Website** : https://본인아이디.github.io/레포지토리이름/
+* **Portfolio Website** :https://mallangdochi.github.io/resume2026/
 
 <br>
 
@@ -54,3 +55,27 @@ resume2026/
 ├── game.png
 ├── video.png
 └── README.md
+
+🌐 주요 기능
+Hero & Profile
+
+기본 인적 사항과 핵심 역량을 보여주는 메인 섹션
+
+Interests (인터랙티브 룰렛)
+
+JavaScript를 활용하여 관심사 4가지를 랜덤으로 뽑는 기능
+
+버튼 클릭 시 회전 애니메이션과 함께 결과 팝업 출력
+
+Development Skills (모달 팝업)
+
+JS 없이 HTML Checkbox와 CSS만을 활용한 가볍고 빠른 스킬 상세 보기 팝업 구현
+
+Work Experience (3D 플립 카드)
+
+CSS 3D Transform을 활용해, 마우스 오버 시 카드가 180도 뒤집히며 상세 업무 성과가 나오는 입체적인 명함 형태 구현
+
+반응형 레이아웃
+
+모바일, 태블릿, 데스크탑 환경에 맞춰 카드 배열이 자연스럽게 변환 (CSS Grid 활용)
+
