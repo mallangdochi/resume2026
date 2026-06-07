@@ -28,8 +28,6 @@
 * JavaScript (Vanilla)
 
 **Design & Video**
-* Premiere Pro
-* After Effects
 * Figma
 
 **Tools**
