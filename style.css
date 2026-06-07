@@ -458,9 +458,9 @@ body {
 .pointer {
     position: absolute;
     top: 50%;
-    right: 277px;
-    left: auto;
-    transform: translateY(-50%);
+    left: 50%; 
+    right: auto; 
+    transform: translate(260px, -50%); 
     width: 0;
     height: 0;
     border-top: 15px solid transparent;
@@ -469,7 +469,6 @@ body {
     border-right: 30px solid #ff4757;
     z-index: 10;
 }
-
 .wheel {
     width: 500px;
     height: 500px;
@@ -538,4 +537,26 @@ body {
     margin-top: 30px;
     font-size: 1.1rem;
     padding: 12px 24px;
+}
+
+@media (max-width: 768px) {
+    /* 원판 크기 220px로 축소 */
+    .wheel {
+        width: 220px;
+        height: 220px;
+    }
+    
+    /* 글씨 크기 및 테두리 여백 축소 */
+    .text-item {
+        font-size: 0.85rem;
+        padding-right: 15px; 
+    }
+    
+    /* 포인터 크기 축소 및 115px로 당겨오기 */
+    .pointer {
+        transform: translate(115px, -50%); 
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+        border-right: 20px solid #ff4757;
+    }
 }
