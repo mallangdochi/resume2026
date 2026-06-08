@@ -107,20 +107,14 @@ body {
     height: 300px; 
     background: var(--accent);
     border-radius: 24px;
-    
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 1.2rem;
     font-weight: bold;
-}
-
-
-.profile-img-placeholder {
     overflow: hidden; 
     padding: 0; 
 }
-
 
 .profile-img-placeholder img {
     width: 100%;
@@ -202,6 +196,7 @@ body {
     flex-wrap: wrap;
     gap: 16px;
     align-items: flex-start;
+    position: relative;
 }
 
 .hover-btn {
@@ -214,32 +209,14 @@ body {
     margin-top: 20px;
     background-color: rgba(255, 255, 255, 0.92);
     font-weight: normal;
-
 }
 
 .hover-btn:hover {
     transform: translateY(-1px);
 }
 
-@media (min-width: 768px) {
-    .header-box {
-        text-align: start;
-    }
-    .profile-img-placeholder {
-        flex: auto;
-        width: 100%;
-        max-width: 100%;
-        height: 250px;
-    }
-}
 .hover-btn:active {
     transform: translateY(0);
-}
-
-.btn-image-wrapper {
-    position: relative;
-    display: flex;
-    align-items: flex-start;
 }
 
 .image-popup {
@@ -274,31 +251,32 @@ body {
     display: block;
 }
 
-
+/* --- 모달 영역 --- */
 .modal-toggle { display: none; }
-
 .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 1000; justify-content: center; align-items: center; }
-
 .modal-toggle:checked + label + .modal { display: flex; }
-
 .modal-body { position: relative; max-width: 80%; }
 .modal-body img { width: 100%; border-radius: 10px; }
 .overlay { position: fixed; top:0; left:0; width:100%; height:100%; }
 
+
+/* --- Work Experience 영역 --- */
 .experience-box {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* 카드들을 무조건 화면 정중앙으로 모아줌 */
     gap: 32px;
     margin-bottom: 80px;
 }
 
-
 .experience-box .section-title {
-    grid-column: 1 / -1; 
+    width: 100%; /* 제목이 혼자 한 줄을 다 차지하도록 설정 (안 그러면 카드 옆에 제목이 붙음) */
     margin-bottom: 10px;
 }
 
 .experience-item.flip-container {
+    flex: 1 1 380px; /* 기본 크기 380px, 공간이 남으면 예쁘게 늘어남 */
+    max-width: 500px; /* 단, 카드가 모니터 끝까지 무식하게 커지지 않도록 500px로 제한 */
     perspective: 1000px; 
     background: transparent;
     min-height: 380px; 
@@ -333,12 +311,11 @@ body {
     gap: 15px; 
 }
 
-.flip-front h3 {
+.flip-front h3, .flip-back h3 {
     margin: 0;
     color: rgb(0, 0, 0);
     font-size: 25px;
 }
-
 
 .flip-back {
     transform: rotateY(180deg);
@@ -349,47 +326,25 @@ body {
     gap: 15px;
 }
 
-.flip-back h3 {
-    margin: 0;
-    color: rgb(0, 0, 0);
-    font-size: 25px;
-}
-
 .flip-back p {
     margin: 0;
     color: rgba(0, 0, 0, 0.9);
     line-height: 1.8;
 }
 
-.experience-item h3 {
-    margin: 0;
-}
+.experience-item h3 { margin: 0; }
+.sub-text { margin: 0; color: var(--muted); font-size: 0.95rem; }
+.experience-box p { margin: 0; line-height: 1.75; color: #333; }
 
-.sub-text {
-    margin: 0;
-    color: var(--muted);
-    font-size: 0.95rem;
-}
-
-.experience-box p {
-    margin: 0;
-    line-height: 1.75;
-    color: #333;
-}
+/* --- Interest & 룰렛 영역 --- */
 .interest-box {
     background: var(--card-bg);
     padding: 50px;
     border-radius: 24px;
     box-shadow: 0 18px 48px rgba(0, 0, 0, 0.08);
-
 }
 
-.tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    justify-content: center;
-}
+.tags { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
 
 .tag {
     display: inline-flex;
@@ -402,49 +357,12 @@ body {
     font-size: 0.95rem;
     transition: background-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
     cursor: default;
-    
 }
 
 .tag:hover {
     background: rgba(123, 104, 238, 0.24);
     transform: translateY(-2px);
     box-shadow: 0 10px 20px rgba(79, 54, 157, 0.12);
-}
-
-@media (max-width: 920px) {
-    .header-box {
-        flex-direction: column;
-        text-align: center;
-        padding: 32px;
-    }
-
-    .profile-img-placeholder {
-        width: 160px;
-        height: 160px;
-    }
-}
-
-@media (max-width: 680px) {
-    .wrapper {
-        padding: 24px 0;
-    }
-
-    .contact-bar {
-        justify-content: center;
-        gap: 12px;
-        font-size: 0.88rem;
-    }
-
-    .experience-box,
-    .card {
-        padding: 28px;
-    }
-}
-
-@media (max-width: 520px) {
-    .section-title {
-        font-size: 2.2rem;
-    }
 }
 
 .roulette-wrapper {
@@ -469,6 +387,7 @@ body {
     border-right: 30px solid #ff4757;
     z-index: 10;
 }
+
 .wheel {
     width: 500px;
     height: 500px;
@@ -516,22 +435,15 @@ body {
     font-size: 1.55rem;
 }
 
-.text-item span {
-    display: block;
-}
-
+.text-item span { display: block; }
 .t1 { transform: rotate(0deg); }   
 .t1 span { transform: rotate(90deg); } 
-
 .t2 { transform: rotate(90deg); }  
 .t2 span { transform: rotate(90deg); } 
-
 .t3 { transform: rotate(180deg); } 
 .t3 span { transform: rotate(90deg); } 
-
 .t4 { transform: rotate(270deg); } 
 .t4 span { transform: rotate(90deg); }
-
 
 .spin-btn {
     margin-top: 30px;
@@ -539,21 +451,70 @@ body {
     padding: 12px 24px;
 }
 
+/* =========================================
+   미디어 쿼리 (반응형 설정)
+========================================= */
+@media (min-width: 768px) {
+    .header-box { text-align: start; }
+    .profile-img-placeholder {
+        flex: auto;
+        width: 100%;
+        max-width: 100%;
+        height: 250px;
+    }
+}
+
+@media (max-width: 920px) {
+    .header-box {
+        flex-direction: column;
+        text-align: center;
+        padding: 32px;
+    }
+    .profile-img-placeholder { width: 160px; height: 160px; }
+}
+
+@media (max-width: 680px) {
+    .wrapper { padding: 24px 0; }
+    .contact-bar {
+        justify-content: center;
+        gap: 12px;
+        font-size: 0.88rem;
+    }
+    .experience-box, .card { padding: 28px; }
+}
+
+@media (max-width: 520px) {
+    .section-title { font-size: 2.2rem; }
+}
+
+/* 👇 모바일 화면 통합 정리 (플립카드 + 룰렛) */
 @media (max-width: 768px) {
+    /* 1. 룰렛 반응형 */
     .wheel {
         width: 220px;
         height: 220px;
     }
-    
     .text-item {
         font-size: 0.85rem;
         padding-right: 15px; 
     }
-    
     .pointer {
         transform: translate(115px, -50%); 
         border-top: 10px solid transparent;
         border-bottom: 10px solid transparent;
         border-right: 20px solid #ff4757;
+    }
+
+    /* 2. 플립 카드 (Work Experience) 반응형 */
+    .experience-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 10px;
+    }
+    .experience-item.flip-container {
+        width: 100%;
+        max-width: 340px; /* 폰 화면에 꽉 차게 예쁘게 정렬 */
+        margin: 0 auto;
     }
 }
